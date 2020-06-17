@@ -12,6 +12,7 @@ axios.defaults.baseURL = `http://localhost:4000/dev`;
 class App extends React.Component {
   state = {
     characters: [],
+    filteredChar: '',
   };
 
   async componentDidMount() {
@@ -23,25 +24,17 @@ class App extends React.Component {
     }
   }
 
-  filterNames = (string) => {
-    const searchNames = this.state.characters.filter((character) =>
-      character.characterName.toLowerCase().includes(string.toLowerCase())
-    );
-    this.setState({
-      characters: searchNames,
-    });
-  };
-
   render() {
     const { characters } = this.state;
     return (
       <Fragment>
         <Header>
-          <SearchBar filterNames={this.filterNames} />
+          <SearchBar
+            onTextChange={(text) => this.setState({ filteredChar: text })}
+          />
         </Header>
         <div className="App">
           <Favourites />
-
           <div className="spacer">
             <h2>Characters</h2>
             <div className="character-controls">
@@ -49,10 +42,17 @@ class App extends React.Component {
               <button>Sort by actor name</button>
             </div>
           </div>
+
           <div className="grid">
-            {characters.map((item) => (
-              <Card {...item} key={item.id} />
-            ))}
+            {this.state.characters
+              .filter((character) =>
+                character.characterName
+                  .toLowerCase()
+                  .includes(this.state.filteredChar.toLowerCase())
+              )
+              .map((item) => (
+                <Card {...item} key={item.id} />
+              ))}
           </div>
         </div>
       </Fragment>
