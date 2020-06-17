@@ -24,9 +24,12 @@ class App extends React.Component {
   }
 
   filterNames = (string) => {
-    return this.state.characters.filter((character) =>
+    const searchNames = this.state.characters.filter((character) =>
       character.characterName.toLowerCase().includes(string.toLowerCase())
     );
+    this.setState({
+      characters: searchNames,
+    });
   };
 
   render() {

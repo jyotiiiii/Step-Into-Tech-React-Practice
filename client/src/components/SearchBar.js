@@ -1,23 +1,18 @@
 import React from 'react';
 
 class SearchBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      filter: '',
-    };
-    this.handleInputChange = this.handleInputChange.bind(this);
-  }
+  state = {
+    filter: '',
+  };
 
-  handleInputChange(event) {
-    const target = event.target.value;
-
-    const charList = this.props.filterNames(target);
-    console.log({ charList });
+  handleInputChange = (event) => {
+    event.preventDefault();
     this.setState({
-      characters: charList,
+      filter: event.target.value,
     });
-  }
+
+    this.props.filterNames(this.state.filter);
+  };
 
   render() {
     return (
