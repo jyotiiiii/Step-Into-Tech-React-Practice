@@ -25,6 +25,12 @@ class App extends React.Component {
   }
 
   render() {
+    const filterNames = this.state.characters.filter((character) =>
+      character.characterName
+        .toLowerCase()
+        .includes(this.state.filteredChar.toLowerCase())
+    );
+
     const { characters } = this.state;
     return (
       <Fragment>
@@ -44,15 +50,11 @@ class App extends React.Component {
           </div>
 
           <div className="grid">
-            {this.state.characters
-              .filter((character) =>
-                character.characterName
-                  .toLowerCase()
-                  .includes(this.state.filteredChar.toLowerCase())
-              )
-              .map((item) => (
-                <Card {...item} key={item.id} />
-              ))}
+            {filterNames.length > 0 ? (
+              filterNames.map((item) => <Card {...item} key={item.id} />)
+            ) : (
+              <div>No results found</div>
+            )}
           </div>
         </div>
       </Fragment>
