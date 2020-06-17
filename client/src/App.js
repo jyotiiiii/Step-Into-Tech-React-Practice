@@ -10,10 +10,14 @@ import Card from './components/Card';
 axios.defaults.baseURL = `http://localhost:4000/dev`;
 
 class App extends React.Component {
-  state = {
-    characters: [],
-    filteredChar: '',
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      characters: [],
+      filteredChar: '',
+      favourites: [],
+    };
+  }
 
   async componentDidMount() {
     try {
@@ -22,6 +26,13 @@ class App extends React.Component {
     } catch (err) {
       console.error(err);
     }
+  }
+
+  addFavourite(newFav) {
+    const favourites = this.state.favourites;
+    favourites.push(newFav);
+    this.setState({ favourites });
+    console.log({ favourites });
   }
 
   render() {
@@ -40,20 +51,31 @@ class App extends React.Component {
           />
         </Header>
         <div className="App">
-          <Favourites />
+          <Favourites favList={this.state.favourites} />
           <div className="spacer">
             <h2>Characters</h2>
             <div className="character-controls">
-              <button>Sort by character name</button>
-              <button>Sort by actor name</button>
+              <button className="sort-button">Sort by character name</button>
+              <button className="sort-button">Sort by actor name</button>
             </div>
           </div>
 
           <div className="grid">
             {filterNames.length > 0 ? (
-              filterNames.map((item) => <Card {...item} key={item.id} />)
+              filterNames.map((item) => (
+                <Card
+                  onHeartClick={(favId) => this.addFavourite(favId)}
+                  {...item}
+                  key={item.id}
+                />
+              ))
             ) : (
-              <div>No results found</div>
+              <small>
+                No results found
+                <span role="img" aria-label="sad face">
+                  😢
+                </span>
+              </small>
             )}
           </div>
         </div>
