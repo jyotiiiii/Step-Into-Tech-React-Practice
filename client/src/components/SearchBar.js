@@ -12,10 +12,10 @@ class SearchBar extends React.Component {
   handleInputChange(event) {
     const target = event.target.value;
 
-    this.props.filterNames(target);
-
+    const charList = this.props.filterNames(target);
+    console.log({ charList });
     this.setState({
-      filter: target,
+      characters: charList,
     });
   }
 

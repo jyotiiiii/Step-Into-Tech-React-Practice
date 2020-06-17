@@ -23,18 +23,10 @@ class App extends React.Component {
     }
   }
 
-  // filterName = (input) => {
-  //   let filteredList = this.state.characters.filter((character) =>
-  //     character.characterName.startsWith(input)
-  //   );
-  //   console.log({ filteredList });
-  // };
-
-  filterNames = (letter) => {
-    let filteredList = this.state.characters.filter((character) =>
-      character.characterName.includes(letter)
+  filterNames = (string) => {
+    return this.state.characters.filter((character) =>
+      character.characterName.toLowerCase().includes(string.toLowerCase())
     );
-    console.log({ filteredList });
   };
 
   render() {
