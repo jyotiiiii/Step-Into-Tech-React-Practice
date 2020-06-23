@@ -17,7 +17,7 @@ class App extends React.Component {
       characters: [],
       filterString: '',
       favourites: [],
-      sortedByCharacter: false,
+      sortedBy: 'characterName',
     };
   }
 
@@ -46,9 +46,13 @@ class App extends React.Component {
         .toLowerCase()
         .includes(this.state.filterString.toLowerCase())
     );
-    filterNames.sort((a, b) => {
-      return a.characterName > b.characterName;
-    });
+
+    filterNames.sort((a, b) =>
+      a[this.state.sortedBy].localeCompare(b[this.state.sortedBy], 'en', {
+        ignorePunctuation: true,
+        sensitivity: 'base',
+      })
+    );
 
     return (
       <Fragment>
@@ -63,12 +67,17 @@ class App extends React.Component {
             <h2>Characters</h2>
             <div className="character-controls">
               <button
-                onClick={() => this.sortCharacterName()}
+                onClick={() => this.setState({ sortedBy: 'characterName' })}
                 className="sort-button"
               >
                 Sort by character name
               </button>
-              <button className="sort-button">Sort by actor name</button>
+              <button
+                onClick={() => this.setState({ sortedBy: 'actorName' })}
+                className="sort-button"
+              >
+                Sort by actor name
+              </button>
             </div>
           </div>
 
