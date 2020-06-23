@@ -12,10 +12,12 @@ axios.defaults.baseURL = `http://localhost:4000/dev`;
 class App extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       characters: [],
-      filteredChar: '',
+      filterString: '',
       favourites: [],
+      sortedByCharacter: false,
     };
   }
 
@@ -29,25 +31,30 @@ class App extends React.Component {
   }
 
   addFavourite(newFav) {
-    const favourites = this.state.favourites;
-    favourites.push(newFav);
+    const { characters, favourites } = this.state;
+    const match = characters.find((character) => character.id === newFav);
+    favourites.push(match);
+
     this.setState({ favourites });
     console.log({ favourites });
   }
 
   render() {
-    const filterNames = this.state.characters.filter((character) =>
+    const { characters } = this.state;
+    const filterNames = characters.filter((character) =>
       character.characterName
         .toLowerCase()
-        .includes(this.state.filteredChar.toLowerCase())
+        .includes(this.state.filterString.toLowerCase())
     );
+    filterNames.sort((a, b) => {
+      return a.characterName > b.characterName;
+    });
 
-    const { characters } = this.state;
     return (
       <Fragment>
         <Header>
           <SearchBar
-            onTextChange={(text) => this.setState({ filteredChar: text })}
+            onTextChange={(text) => this.setState({ filterString: text })}
           />
         </Header>
         <div className="App">
@@ -55,7 +62,12 @@ class App extends React.Component {
           <div className="spacer">
             <h2>Characters</h2>
             <div className="character-controls">
-              <button className="sort-button">Sort by character name</button>
+              <button
+                onClick={() => this.sortCharacterName()}
+                className="sort-button"
+              >
+                Sort by character name
+              </button>
               <button className="sort-button">Sort by actor name</button>
             </div>
           </div>
