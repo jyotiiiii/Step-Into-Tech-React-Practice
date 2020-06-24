@@ -4,8 +4,8 @@ class Card extends React.Component {
   render() {
     const { id, characterName, actorName, imageUrl } = this.props;
     return (
-      <div className="card">
-        <img src={imageUrl} alt={characterName} />
+      <div className="card ">
+        <img className="fade-in" src={imageUrl} alt={characterName} />
         <h3 className="character">{characterName}</h3>
         <button
           className="favourite-button"
