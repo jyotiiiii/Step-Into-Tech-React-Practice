@@ -13,7 +13,13 @@ class Favourites extends React.Component {
         <h2>My Favourites</h2>
         <div className="grid">
           {myFavs.length > 0 ? (
-            myFavs.map((item) => <Card {...item} key={item.id} />)
+            myFavs.map((item) => (
+              <Card
+                onHeartClick={this.props.onHeartClick}
+                {...item}
+                key={item.id}
+              />
+            ))
           ) : (
             <small>
               No favourites here yet
@@ -29,18 +35,3 @@ class Favourites extends React.Component {
 }
 
 export default Favourites;
-
-{
-  /* <div className="grid">
-            {myFavs.length > 0 ? (
-              myFavs.map((item) => <Card {...item} key={item.id} />)
-            ) : (
-              <small>
-                No favourites here yet
-                <span role="img" aria-label="sad face">
-                  😢
-                </span>
-              </small>
-            )}
-          </div> */
-}

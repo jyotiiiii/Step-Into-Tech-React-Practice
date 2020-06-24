@@ -29,12 +29,18 @@ class App extends React.Component {
       console.error(err);
     }
   }
-
+  // if (task.id === taskId) {
+  //         // add a toggle to change status
+  //         task.completed = task.completed ? 0 : 1;
   addFavourite(newFav) {
     const { characters, favourites } = this.state;
     const match = characters.find((character) => character.id === newFav);
-    favourites.push(match);
-
+    if (favourites.includes(match)) {
+      let index = favourites.indexOf(match);
+      if (index !== -1) favourites.splice(index, 1);
+    } else {
+      favourites.push(match);
+    }
     this.setState({ favourites });
     console.log({ favourites });
   }
@@ -62,7 +68,11 @@ class App extends React.Component {
           />
         </Header>
         <div className="App">
-          <Favourites favList={this.state.favourites} />
+          <Favourites
+            onHeartClick={(favId) => this.addFavourite(favId)}
+            favList={this.state.favourites}
+          />
+
           <div className="spacer">
             <h2>Characters</h2>
             <div className="character-controls">
