@@ -57,6 +57,10 @@ input {
   font-family: ReithSans, Helvetica, Arial, sans-serif;
 }
 
+button {
+  border: none;
+  background: none;
+}
 .sort-button {
   background-color: #253a81;
   color: #fff;

@@ -8,19 +8,25 @@ class Card extends React.Component {
         <div className="container">
           <img className="fade-in image" src={imageUrl} alt={characterName} />
           <div class="overlay">
-            <a href="#" class="icon" title="User Profile">
+            <button
+              data-title="Click to add to favourites"
+              onClick={(event) => this.props.onHeartClick(id)}
+              href="#"
+              className="icon"
+              title="User Profile"
+            >
               <i class="far fa-heart fa-lg"></i>
-            </a>
+            </button>
           </div>
         </div>
         <h3 className="character">{characterName}</h3>
-        <button
+        {/* <button
           className="favourite-button"
           data-title="Click to add to favourites"
           onClick={(event) => this.props.onHeartClick(id)}
         >
           <i className="far fa-heart fa-lg"></i>
-        </button>
+        </button> */}
         <small>Played by: {actorName}</small>
       </div>
     );
