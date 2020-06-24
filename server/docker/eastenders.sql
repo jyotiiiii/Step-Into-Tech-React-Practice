@@ -83,13 +83,9 @@ VALUES
 	(41,'Alfie Moon','Shane Richie','https://ichef.bbci.co.uk/images/ic/256x144/p00pd20d.jpg',NULL,NULL),
 	(42,'Kat Moon','Jessie Wallace','https://ichef.bbci.co.uk/images/ic/256x144/p00q6x07.jpg',NULL,NULL),
 	(43,'Mo Harris','Laila Morse','https://ichef.bbci.co.uk/images/ic/256x144/p00w8df9.jpg',NULL,NULL),
-	(44,'Stacey Fowler','Lacey Turner','https://ichef.bbci.co.uk/images/ic/256x144/p01rk2s9.jpg',NULL,NULL),
-	(45,'Jean Slater','Gillian Wright','https://ichef.bbci.co.uk/images/ic/256x144/p00w8dgk.jpg',NULL,NULL),
-	(46,'Kat Moon','Jessie Wallace','https://ichef.bbci.co.uk/images/ic/256x144/p00q6x07.jpg',NULL,NULL),
-	(47,'Mo Harris','Laila Morse','https://ichef.bbci.co.uk/images/ic/256x144/p00w8df9.jpg',NULL,NULL),
-	(48,'Ryan Malloy','Neil McDermott','https://ichef.bbci.co.uk/images/ic/256x144/p00qpnmg.jpg',NULL,NULL),
-	(49,'Stacey Fowler','Lacey Turner','https://ichef.bbci.co.uk/images/ic/256x144/p01rk2s9.jpg',NULL,NULL);
-
+	(44,'Jean Slater','Gillian Wright','https://ichef.bbci.co.uk/images/ic/256x144/p00w8dgk.jpg',NULL,NULL),
+	(45,'Ryan Malloy','Neil McDermott','https://ichef.bbci.co.uk/images/ic/256x144/p00qpnmg.jpg',NULL,NULL),
+	
 /*!40000 ALTER TABLE `characters` ENABLE KEYS */;
 UNLOCK TABLES;
 

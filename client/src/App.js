@@ -29,9 +29,7 @@ class App extends React.Component {
       console.error(err);
     }
   }
-  // if (task.id === taskId) {
-  //         // add a toggle to change status
-  //         task.completed = task.completed ? 0 : 1;
+
   addFavourite(newFav) {
     const { characters, favourites } = this.state;
     const match = characters.find((character) => character.id === newFav);
@@ -42,7 +40,6 @@ class App extends React.Component {
       favourites.push(match);
     }
     this.setState({ favourites });
-    console.log({ favourites });
   }
 
   render() {
