@@ -194,3 +194,8 @@ button {
 .icon:hover {
   color: white;
 }
+
+.icon:focus,
+.icon:active {
+  outline: none;
+}
