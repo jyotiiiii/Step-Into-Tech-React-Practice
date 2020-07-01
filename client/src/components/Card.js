@@ -7,7 +7,7 @@ class Card extends React.Component {
       <div className="card">
         <div className="container">
           <img className="fade-in image" src={imageUrl} alt={characterName} />
-          <div class="overlay">
+          <div className="overlay">
             <button
               data-title="Click to add to favourites"
               onClick={(event) => this.props.onHeartClick(id)}
@@ -15,7 +15,7 @@ class Card extends React.Component {
               className="icon"
               title="User Profile"
             >
-              <i class="far fa-heart fa-lg"></i>
+              <i className="far fa-heart fa-lg"></i>
             </button>
           </div>
         </div>

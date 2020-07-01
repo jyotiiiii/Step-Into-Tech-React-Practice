@@ -6,6 +6,7 @@ import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import Favourites from './components/Favourites';
 import Card from './components/Card';
+import Modal from './components/Modal';
 
 axios.defaults.baseURL = `http://localhost:4000/dev`;
 
@@ -18,6 +19,7 @@ class App extends React.Component {
       filterString: '',
       favourites: [],
       sortedBy: 'characterName',
+      show: false,
     };
   }
 
@@ -42,6 +44,14 @@ class App extends React.Component {
     this.setState({ favourites });
   }
 
+  showModal = () => {
+    this.setState({ show: true });
+  };
+
+  hideModal = () => {
+    this.setState({ show: false });
+  };
+
   render() {
     const { characters } = this.state;
     const filterNames = characters.filter((character) =>
@@ -64,6 +74,16 @@ class App extends React.Component {
             onTextChange={(text) => this.setState({ filterString: text })}
           />
         </Header>
+
+        <h1>React Modal</h1>
+        <Modal show={this.state.show} handleClose={this.hideModal}>
+          <p>Modal</p>
+          <p>Data</p>
+        </Modal>
+        <button type="button" onClick={this.showModal}>
+          open
+        </button>
+
         <div className="App">
           <Favourites
             onHeartClick={(favId) => this.addFavourite(favId)}
