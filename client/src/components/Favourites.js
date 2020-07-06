@@ -5,9 +5,6 @@ class Favourites extends React.Component {
     const myFavs = this.props.favList;
     //create new array of character objects where id is present in the myFavs array
 
-    console.log({ myFavs });
-    const { id, characterName, actorName, imageUrl } = this.props;
-
     return (
       <div className="spacer">
         <h2>My Favourites</h2>
