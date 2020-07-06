@@ -21,7 +21,8 @@ class App extends React.Component {
       favourites: [],
       sortedBy: 'characterName',
       show: false,
-      testInput: '',
+      bioDescription: '',
+      bioCharacter: '',
     };
   }
 
@@ -47,22 +48,19 @@ class App extends React.Component {
     this.setState({ favourites });
   }
 
-  showModal = () => {
-    this.setState(
-      {
-        show: true,
-      },
-      () => {
-        setTimeout(() => {
-          this.testInput && this.testInput.focus();
-        }, 1);
-      }
-    );
+  addBio = (text, id) => {
+    const { characters, bio } = this.state;
+    const character = characters.find((character) => character.id === id);
+    !character.bio
+      ? this.setState({ bio: text })
+      : alert('There is already a bio for this character');
   };
 
-  // showModal = () => {
-  //   this.setState({ show: true });
-  // };
+  showModal = () => {
+    this.setState({
+      show: true,
+    });
+  };
 
   hideModal = () => {
     this.setState({ show: false });
@@ -93,7 +91,7 @@ class App extends React.Component {
         <div className="App">
           <Modal
             show={this.state.show}
-            testInput={this.state.testInput}
+            addBio={this.addBio()}
             handleClose={this.hideModal}
             characters={this.state.characters}
           />

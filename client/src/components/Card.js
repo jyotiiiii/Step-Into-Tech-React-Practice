@@ -2,7 +2,14 @@ import React from 'react';
 
 class Card extends React.Component {
   render() {
-    const { id, characterName, actorName, imageUrl, onHeartClick } = this.props;
+    const {
+      id,
+      characterName,
+      actorName,
+      bio,
+      imageUrl,
+      onHeartClick,
+    } = this.props;
     return (
       <div className="card">
         <div className="container">
@@ -31,6 +38,7 @@ class Card extends React.Component {
           <h3 className="character">{characterName}</h3>
 
           <small>Played by: {actorName}</small>
+          {bio ? <small>Biography: {bio}</small> : null}
         </div>
       </div>
     );
