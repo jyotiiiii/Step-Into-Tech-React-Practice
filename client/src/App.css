@@ -80,6 +80,9 @@ button {
   background-color: #3051c1;
 }
 
+.bio {
+  float: right;
+}
 .spacer {
   margin-bottom: 2rem;
 }

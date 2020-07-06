@@ -99,14 +99,6 @@ class App extends React.Component {
             characters={this.state.characters}
           />
 
-          <button
-            className="sort-button"
-            type="button"
-            onClick={this.showModal}
-          >
-            Add Biography
-          </button>
-
           <Favourites
             onHeartClick={(favId) => this.addFavourite(favId)}
             favList={this.state.favourites}
@@ -126,6 +118,13 @@ class App extends React.Component {
                 className="sort-button"
               >
                 Sort by actor name
+              </button>
+              <button
+                className="sort-button bio"
+                type="button"
+                onClick={this.showModal}
+              >
+                Add Biography
               </button>
             </div>
           </div>
