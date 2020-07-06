@@ -1,15 +1,32 @@
 import React from 'react';
 
-const Modal = ({ handleClose, show, children }) => {
+const Modal = ({ characters, handleClose, show, testInput }) => {
   const showHideClassName = show ? 'modal display-block' : 'modal display-none';
-  console.log(show);
-  console.log(showHideClassName);
 
   return (
     <div className={showHideClassName}>
       <section className="modal-main">
-        {children}
-        <button onClick={handleClose}>close</button>
+        <h2>Add Biography to character</h2>
+        <label for="bio">Choose a character:</label>
+        <select name="bio" id="bio">
+          {characters.map((item) => (
+            <option value={item.characterName} key={item.id}>
+              {item.characterName}
+            </option>
+          ))}
+        </select>
+        <textarea
+          className="text-area display-block"
+          type="text"
+          ref={(textarea) => {
+            testInput = textarea;
+          }}
+        ></textarea>
+
+        <button className="sort-button">save</button>
+        <button className="sort-button" onClick={handleClose}>
+          cancel
+        </button>
       </section>
     </div>
   );

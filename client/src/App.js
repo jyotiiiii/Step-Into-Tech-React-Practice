@@ -10,6 +10,7 @@ import Modal from './components/Modal';
 
 axios.defaults.baseURL = `http://localhost:4000/dev`;
 
+//change to function component with hooks for state
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -20,6 +21,7 @@ class App extends React.Component {
       favourites: [],
       sortedBy: 'characterName',
       show: false,
+      testInput: '',
     };
   }
 
@@ -32,11 +34,12 @@ class App extends React.Component {
     }
   }
 
+  // this will save favourites in state (or unfavourite)
   addFavourite(newFav) {
     const { characters, favourites } = this.state;
     const match = characters.find((character) => character.id === newFav);
     if (favourites.includes(match)) {
-      let index = favourites.indexOf(match);
+      const index = favourites.indexOf(match);
       if (index !== -1) favourites.splice(index, 1);
     } else {
       favourites.push(match);
@@ -45,8 +48,21 @@ class App extends React.Component {
   }
 
   showModal = () => {
-    this.setState({ show: true });
+    this.setState(
+      {
+        show: true,
+      },
+      () => {
+        setTimeout(() => {
+          this.testInput && this.testInput.focus();
+        }, 1);
+      }
+    );
   };
+
+  // showModal = () => {
+  //   this.setState({ show: true });
+  // };
 
   hideModal = () => {
     this.setState({ show: false });
@@ -74,17 +90,22 @@ class App extends React.Component {
             onTextChange={(text) => this.setState({ filterString: text })}
           />
         </Header>
-
-        <h1>React Modal</h1>
-        <Modal show={this.state.show} handleClose={this.hideModal}>
-          <p>Modal</p>
-          <p>Data</p>
-        </Modal>
-        <button type="button" onClick={this.showModal}>
-          open
-        </button>
-
         <div className="App">
+          <Modal
+            show={this.state.show}
+            testInput={this.state.testInput}
+            handleClose={this.hideModal}
+            characters={this.state.characters}
+          />
+
+          <button
+            className="sort-button"
+            type="button"
+            onClick={this.showModal}
+          >
+            Add Biography
+          </button>
+
           <Favourites
             onHeartClick={(favId) => this.addFavourite(favId)}
             favList={this.state.favourites}

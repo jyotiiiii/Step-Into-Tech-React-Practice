@@ -2,7 +2,7 @@ import React from 'react';
 
 class Card extends React.Component {
   render() {
-    const { id, characterName, actorName, imageUrl } = this.props;
+    const { id, characterName, actorName, imageUrl, onHeartClick } = this.props;
     return (
       <div className="card">
         <div className="container">
@@ -10,10 +10,10 @@ class Card extends React.Component {
           <div className="overlay">
             <button
               data-title="Click to add to favourites"
-              onClick={(event) => this.props.onHeartClick(id)}
+              onClick={() => onHeartClick(id)}
               href="#"
               className="icon"
-              title="User Profile"
+              title={`Click to add/remove ${characterName} to favourites`}
             >
               <i className="far fa-heart fa-lg"></i>
             </button>
@@ -23,7 +23,8 @@ class Card extends React.Component {
           <button
             className="favourite-button positioned-button"
             data-title="Click to add to favourites"
-            onClick={(event) => this.props.onHeartClick(id)}
+            onClick={() => onHeartClick(id)}
+            title={`Click to add/remove ${characterName} to favourites`}
           >
             <i className="far fa-heart fa-lg"></i>
           </button>
