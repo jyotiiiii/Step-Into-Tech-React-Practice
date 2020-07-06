@@ -37,8 +37,14 @@ class Card extends React.Component {
           </button>
           <h3 className="character">{characterName}</h3>
 
-          <small>Played by: {actorName}</small>
-          {bio ? <small>Biography: {bio}</small> : null}
+          <small>
+            <strong>Played by:</strong> {actorName}
+          </small>
+          {bio ? (
+            <small>
+              <strong>Biography:</strong> {bio.substring(0, 80)}...
+            </small>
+          ) : null}
         </div>
       </div>
     );

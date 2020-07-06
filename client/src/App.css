@@ -29,6 +29,7 @@ h3 {
 
 small {
   display: block;
+  margin-top: 1%;
 }
 .App {
   max-width: 1280px;
@@ -86,7 +87,7 @@ button {
 .favourite-button {
   float: right;
   color: #253a81;
-  padding-top: 2%;
+  padding-top: 3%;
   padding-right: 0%;
   border: none;
   background: none;
@@ -221,6 +222,7 @@ over the Character name */
   margin: 1%;
 }
 .drop-down {
+  font-family: ReithSans, Helvetica, Arial, sans-serif;
   margin-top: 1%;
   margin-right: 1%;
 }
@@ -247,11 +249,13 @@ over the Character name */
 }
 
 .text-area {
+  font-family: ReithSans, Helvetica, Arial, sans-serif;
   width: 95%;
   height: 120px;
   border: 2px solid #cccccc;
   margin-top: 2%;
   margin-bottom: 2%;
+  padding: 1%;
 }
 
 .display-block {

@@ -52,11 +52,11 @@ class Modal extends React.Component {
               </option>
             ))}
           </select>
-          <input
+          <textarea
             className="text-area display-block"
             type="text"
             onChange={this.bioDescriptionNew}
-          />
+          ></textarea>
 
           <button className="sort-button" type="submit" onClick={this.addBio}>
             Save
