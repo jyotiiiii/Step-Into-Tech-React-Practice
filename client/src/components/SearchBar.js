@@ -1,7 +1,6 @@
 import React from 'react';
 
-class SearchBar extends React.Component {
-  render() {
+function SearchBar(){
     return (
       <input
         placeholder="Search for a character or actor"
