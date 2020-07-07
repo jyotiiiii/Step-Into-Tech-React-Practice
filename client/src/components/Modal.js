@@ -6,14 +6,9 @@ class Modal extends React.Component {
     bioCharacter: '',
   };
 
-  addBio = (event) => {
-    // event.preventDefault();
+  addBio = () => {
     this.props.addBio(this.state.bioDescription, this.state.bioCharacter);
   };
-
-  // characters,
-  // handleClose,
-  // show,
 
   bioDescriptionNew = (event) => {
     this.setState({
@@ -29,6 +24,13 @@ class Modal extends React.Component {
   };
 
   render() {
+    const selectNames = this.props.characters.sort((a, b) =>
+      a['characterName'].localeCompare(b['characterName'], 'en', {
+        ignorePunctuation: true,
+        sensitivity: 'base',
+      })
+    );
+
     const showHideClassName = this.props.show
       ? 'modal display-block'
       : 'modal display-none';
@@ -46,7 +48,7 @@ class Modal extends React.Component {
             id="bio"
             onChange={this.bioCharacterSet}
           >
-            {this.props.characters.map((item) => (
+            {selectNames.map((item) => (
               <option value={item.id} key={item.id}>
                 {item.characterName}
               </option>
