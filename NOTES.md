@@ -77,13 +77,13 @@ There are 2 buttons to sort the characters that currently aren't hooked up to an
 
 - Create a click handler for each button, that sorts the characters by their character name, or their actor's name
 
-<span style="color: red;">Sorting function added to filterNames()
-in the render method App.js line 65<br>
-will render alphabetically by default<br>
-(sortedBy: 'characterName',) added to state<br>
-onClick() will change the state to sortedBy: 'actorName'
-
-</span>
+```diff
++ Sorting function added to filterNames()
++ in the render method App.js line 65<br>
++ will render alphabetically by default<br>
++ (sortedBy: 'characterName',) added to state<br>
++ onClick() will change the state to sortedBy: 'actorName'
+```
 
 ##### 🎨 CSS
 
