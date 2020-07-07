@@ -47,6 +47,7 @@ class App extends React.Component {
   }
 
   addBio = (text, searchId) => {
+    console.log({ text }, { searchId });
     const { characters } = this.state;
     const match = characters.find(
       (character) => character.id === parseInt(searchId)
