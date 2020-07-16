@@ -71,13 +71,14 @@ class App extends React.Component {
   };
 
   render() {
+    // TODO: filter out duplicates
     const { characters } = this.state;
     const filterNames = characters.filter((character) =>
       character.characterName
         .toLowerCase()
         .includes(this.state.filterString.toLowerCase())
     );
-
+    console.log({ filterNames });
     filterNames.sort((a, b) =>
       a[this.state.sortedBy].localeCompare(b[this.state.sortedBy], 'en', {
         ignorePunctuation: true,

@@ -3,8 +3,8 @@
 ## 📝ToDo
 
 - [ ] Conditional title on favourite to add/remove from favourites
-- [ ] Modal
-- [ ] Change button
+- [x] Modal
+- [ ] Implement the State Hook
 
 ## 🏗 Notes
 
