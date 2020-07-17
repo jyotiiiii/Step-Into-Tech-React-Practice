@@ -2,8 +2,8 @@ import React from 'react';
 import Card from './Card';
 
 function Favourites(props) {
-  const { favList, onHeartClick } = props;
-
+  const { favList, onClick } = props;
+  console.log({ favList });
   return (
     <div className="spacer">
       <h2>My Favourites</h2>
@@ -11,7 +11,7 @@ function Favourites(props) {
         {favList.length > 0 ? (
           favList.map((item) => (
             <Card
-              onHeartClick={onHeartClick}
+              onClick={onClick}
               {...item}
               key={item.id}
             />

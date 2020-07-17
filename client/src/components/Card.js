@@ -8,7 +8,7 @@ function Card(props) {
     actorName,
     bio,
     imageUrl,
-    onHeartClick,
+    onClick,
   } = props;
 
   return (
@@ -18,7 +18,7 @@ function Card(props) {
         <div className="overlay">
           <button
             data-title="Click to add to favourites"
-            onClick={() => onHeartClick(id)}
+            onClick={() => onClick(id)}
             href="#"
             className="icon"
             title={`Click to add/remove ${characterName} to favourites`}
@@ -31,7 +31,7 @@ function Card(props) {
         <button
           className="favourite-button positioned-button"
           data-title="Click to add to favourites"
-          onClick={() => onHeartClick(id)}
+          onClick={() => onClick(id)}
           title={`Click to add/remove ${characterName} to favourites`}
         >
           <i className="far fa-heart fa-lg"></i>

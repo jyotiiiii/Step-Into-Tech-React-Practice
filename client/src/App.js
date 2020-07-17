@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 
@@ -11,136 +11,136 @@ import Modal from './components/Modal';
 axios.defaults.baseURL = `http://localhost:4000/dev`;
 
 //change to function component with hooks for state
-class App extends React.Component {
-  constructor(props) {
-    super(props);
+function App() {
 
-    this.state = {
-      characters: [],
-      filterString: '',
-      favourites: [],
-      sortedBy: 'characterName',
-      show: false,
-    };
-  }
+  const [characters, setCharacters] = useState([]);
+  const [favourites, setFavourites] = useState([]);
+  const [filterString, setFilterString] = useState('');
+  const [sortedBy, setSortedBy] = useState('characterName');
+  const [show, setShow] = useState(false);
 
-  async componentDidMount() {
-    try {
-      const { data } = await axios.get('/characters');
-      this.setState({ characters: data });
-    } catch (err) {
-      console.error(err);
+  // replaces componentDidMount
+  useEffect(() => {
+    const getCharacters = async () => {
+      try {
+        const { data } = await axios.get(`/characters`)
+        setCharacters(data)
+      } catch (err) {
+        console.error(err)
+      }
     }
-  }
+    getCharacters()
+  }, [])
 
-  // this will save favourites in state (or unfavourite)
-  addFavourite(newFav) {
-    const { characters, favourites } = this.state;
+  // TODO: not working need to make sure favourites are getting re-rendered
+  const addFavourite = (newFav) => {
+    console.log({ newFav });
+    let updateFavs = favourites;
     const match = characters.find((character) => character.id === newFav);
-    if (favourites.includes(match)) {
-      const index = favourites.indexOf(match);
-      if (index !== -1) favourites.splice(index, 1);
+    if (updateFavs.includes(match)) {
+      const index = updateFavs.indexOf(match);
+      if (index !== -1) updateFavs.splice(index, 1);
     } else {
-      favourites.push(match);
+      updateFavs.push(match);
     }
-    this.setState({ favourites });
+    setFavourites(updateFavs);
+    console.log({ favourites });
   }
 
-  addBio = (text, searchId) => {
-    console.log({ text }, { searchId });
-    const { characters } = this.state;
-    const match = characters.find(
+  const addBio = (text, searchId) => {
+    console.log({ text }, { searchId }, characters);
+    // const { characters } = this.state;
+
+    let charBio = characters;
+    const match = charBio.find(
       (character) => character.id === parseInt(searchId)
     );
-    const index = characters.indexOf(match);
-    characters[index].bio = text;
-    this.setState({
-      characters: characters,
-      show: false,
-    });
+    const index = charBio.indexOf(match);
+    charBio[index].bio = text;
+    setCharacters(charBio);
+    setShow(false);
   };
 
-  showModal = () => {
-    this.setState({
-      show: true,
-    });
+  const showModal = () => {
+    setShow(true);
   };
 
-  hideModal = () => {
-    this.setState({ show: false });
+  const hideModal = () => {
+    setShow(false);
   };
 
-  render() {
-    // TODO: filter out duplicates
-    const { characters } = this.state;
-    const filterNames = characters.filter((character) =>
-      character.characterName
-        .toLowerCase()
-        .includes(this.state.filterString.toLowerCase())
-    );
-    console.log({ filterNames });
-    filterNames.sort((a, b) =>
-      a[this.state.sortedBy].localeCompare(b[this.state.sortedBy], 'en', {
-        ignorePunctuation: true,
-        sensitivity: 'base',
-      })
-    );
 
-    return (
-      <Fragment>
-        <Header>
-          <SearchBar
-            onTextChange={(text) => this.setState({ filterString: text })}
-          />
-        </Header>
-        <div className="App">
-          <Modal
-            show={this.state.show}
-            addBio={this.addBio}
-            handleClose={this.hideModal}
-            characters={this.state.characters}
-          />
+  // TODO: filter out duplicates
 
-          <Favourites
-            onHeartClick={(favId) => this.addFavourite(favId)}
-            favList={this.state.favourites}
-          />
+  const filterNames = characters.filter((character) =>
+    character.characterName
+      .toLowerCase()
+      .includes(filterString.toLowerCase())
+  );
+  console.log({ filterNames });
+  filterNames.sort((a, b) =>
+    a[sortedBy].localeCompare(b[sortedBy], 'en', {
+      ignorePunctuation: true,
+      sensitivity: 'base',
+    })
+  );
 
-          <div className="spacer">
-            <h2>Characters</h2>
-            <div className="character-controls">
-              <button
-                onClick={() => this.setState({ sortedBy: 'characterName' })}
-                className="sort-button"
-              >
-                Sort by character name
+  return (
+    <>
+      <Header>
+        <SearchBar
+          onTextChange={(text) => setFilterString(text)}
+        />
+      </Header>
+      <div className="App">
+        <Modal
+          show={show}
+          addBio={addBio}
+          handleClose={hideModal}
+          characters={characters}
+        />
+
+        <Favourites
+          onClick={(favId) => addFavourite(favId)}
+          favList={favourites}
+        />
+
+        <div className="spacer">
+          <h2>Characters</h2>
+          <div className="character-controls">
+            <button
+              onClick={() => setSortedBy('characterName')}
+              className="sort-button"
+            >
+              Sort by character name
               </button>
-              <button
-                onClick={() => this.setState({ sortedBy: 'actorName' })}
-                className="sort-button"
-              >
-                Sort by actor name
+            <button
+              onClick={() => setSortedBy('actorName')}
+              className="sort-button"
+            >
+              Sort by actor name
               </button>
-              <button
-                className="sort-button bio"
-                type="button"
-                onClick={this.showModal}
-              >
-                Add Biography
+            <button
+              className="sort-button bio"
+              type="button"
+              onClick={() => showModal()}
+            >
+              Add Biography
               </button>
-            </div>
           </div>
+        </div>
 
-          <div className="grid">
-            {filterNames.length > 0 ? (
-              filterNames.map((item) => (
-                <Card
-                  onHeartClick={(favId) => this.addFavourite(favId)}
-                  {...item}
-                  key={item.id}
-                />
-              ))
-            ) : (
+        <div className="grid">
+          {filterNames.length > 0 ? (
+            filterNames.map((item) => (
+              <Card
+
+                onClick={(favId) => addFavourite(favId)}
+                {...item}
+                key={item.id}
+              />
+            ))
+          ) : (
               <small>
                 No results found
                 <span role="img" aria-label="sad face">
@@ -148,11 +148,11 @@ class App extends React.Component {
                 </span>
               </small>
             )}
-          </div>
         </div>
-      </Fragment>
-    );
-  }
+      </div>
+    </>
+  );
 }
+
 
 export default App;
