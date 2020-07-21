@@ -20,6 +20,7 @@ function App() {
   const [show, setShow] = useState(false);
 
   // replaces componentDidMount
+  // TODO: not working need to make sure favourites are getting re-rendered
   useEffect(() => {
     const getCharacters = async () => {
       try {
@@ -29,10 +30,10 @@ function App() {
         console.error(err)
       }
     }
-    if (!characters.length) getCharacters();
-  }, [characters, favourites])
+    getCharacters();
+  }, [])
 
-  // TODO: not working need to make sure favourites are getting re-rendered
+
   const handleFavourite = (newFav) => {
     console.log({ newFav });
     let updateFavs = favourites;
