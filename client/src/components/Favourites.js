@@ -11,6 +11,7 @@ function Favourites(props) {
         {favList.length > 0 ? (
           favList.map((item) => (
             <Card
+              isFavourite
               onClick={onClick}
               {...item}
               key={item.id}

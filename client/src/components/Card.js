@@ -9,6 +9,7 @@ function Card(props) {
     bio,
     imageUrl,
     onClick,
+    isFavourite,
   } = props;
 
   return (
@@ -29,9 +30,10 @@ function Card(props) {
       </div>
       <div className="details">
         <button
-          className="favourite-button positioned-button"
+          className={`favourite-button positioned-button ${isFavourite ? 'active' : ''}`}
           data-title="Click to add to favourites"
           onClick={() => onClick(id)}
+
           title={`Click to add/remove ${characterName} to favourites`}
         >
           <i className="far fa-heart fa-lg"></i>

@@ -29,11 +29,11 @@ function App() {
         console.error(err)
       }
     }
-    getCharacters()
-  }, [])
+    if (!characters.length) getCharacters();
+  }, [characters, favourites])
 
   // TODO: not working need to make sure favourites are getting re-rendered
-  const addFavourite = (newFav) => {
+  const handleFavourite = (newFav) => {
     console.log({ newFav });
     let updateFavs = favourites;
     const match = characters.find((character) => character.id === newFav);
@@ -47,7 +47,7 @@ function App() {
     console.log({ favourites });
   }
 
-  const addBio = (text, searchId) => {
+  const handleBio = (text, searchId) => {
     console.log({ text }, { searchId }, characters);
     // const { characters } = this.state;
 
@@ -95,13 +95,13 @@ function App() {
       <div className="App">
         <Modal
           show={show}
-          addBio={addBio}
+          addBio={handleBio}
           handleClose={hideModal}
           characters={characters}
         />
 
         <Favourites
-          onClick={(favId) => addFavourite(favId)}
+          onClick={handleFavourite}
           favList={favourites}
         />
 
@@ -134,8 +134,8 @@ function App() {
           {filterNames.length > 0 ? (
             filterNames.map((item) => (
               <Card
-
-                onClick={(favId) => addFavourite(favId)}
+                isFavourite={favourites.findIndex((fav) => fav.id === item.id) !== -1}
+                onClick={handleFavourite}
                 {...item}
                 key={item.id}
               />
