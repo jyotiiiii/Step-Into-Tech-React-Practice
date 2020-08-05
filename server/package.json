@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "serverless": "^1.68.0"
+    "serverless": "^1.78.1"
   },
   "dependencies": {
     "express": "^4.17.1",

@@ -44,7 +44,9 @@ function App() {
     } else {
       updateFavs.push(match);
     }
-    setFavourites(updateFavs);
+    // setFavourites(updateFavs) will not trigger a re-render, destructuring with spread operator 
+    // let the function know its a new array;
+    setFavourites([...updateFavs]);
     console.log({ favourites });
   }
 
