@@ -1,0 +1,364 @@
+{
+    "characters": [
+        {
+            "id": 1,
+            "characterName": "Ian Beale",
+            "actorName": "Adam Woodyatt",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p01gw8fm.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 2,
+            "characterName": "Jane Beale",
+            "actorName": "Laurie Brett",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p02cxbjf.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 3,
+            "characterName": "Kathy Beale",
+            "actorName": "Gillian Taylforth",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p032krh6.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 4,
+            "characterName": "Steven Beale",
+            "actorName": "Aaron Sidwell",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p03wt0yk.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 5,
+            "characterName": "Abi Branning",
+            "actorName": "Lorna Fitzgerald",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p03r153p.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 6,
+            "characterName": "Dot Branning",
+            "actorName": "June Brown",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p01479vt.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 7,
+            "characterName": "Jack Branning",
+            "actorName": "Scott Maslen",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p03z1ch7.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 8,
+            "characterName": "Lauren Branning",
+            "actorName": "Jacqueline Jossa",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p040hjmp.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 9,
+            "characterName": "Max Branning",
+            "actorName": "Jake Wood",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p04ly3p1.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 10,
+            "characterName": "Babe Smith \n (Aunt Babe)",
+            "actorName": "Annette Badland",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p01r4xrx.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 11,
+            "characterName": "Johnny Carter",
+            "actorName": "Ted Reilly",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p03nrl1c.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 12,
+            "characterName": "Lee Carter",
+            "actorName": "anny-Boy Hatchard",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p036k85y.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 13,
+            "characterName": "Linda Carter",
+            "actorName": "Kellie Bright",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p01nl473.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 14,
+            "characterName": "Mick Carter",
+            "actorName": "Danny Dyer",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p0414pqp.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 15,
+            "characterName": "Shirley Carter",
+            "actorName": "Linda Henry",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p01fhbtc.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 16,
+            "characterName": "Tina Carter",
+            "actorName": "Luisa Bradshaw-White",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p01lrbk1.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 17,
+            "characterName": "Whitney Carter",
+            "actorName": "Shona McGarty",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p036kbg2.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 18,
+            "characterName": "Martin Fowler",
+            "actorName": "James Bye",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p02dkkpn.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 19,
+            "characterName": "Michelle Fowler",
+            "actorName": "Jenna Russell",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p04lxnx1.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 20,
+            "characterName": "Rebecca Fowler",
+            "actorName": "Jasmine Armfield",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p03y9rdh.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 21,
+            "characterName": "Sonia Fowler",
+            "actorName": "Natalie Cassidy",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p01xrx0r.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 22,
+            "characterName": "Stacey Fowler",
+            "actorName": "Lacey Turner",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p01rk2s9.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 23,
+            "characterName": "Claudette Hubbard",
+            "actorName": "Ellen Thomas",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p02p8mxd.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 24,
+            "characterName": "Denise Fox",
+            "actorName": "Diane Parish",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p040hhmd.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 25,
+            "characterName": "Donna Yates",
+            "actorName": "Lisa Hammond",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p01xrrpt.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 26,
+            "characterName": "Kim Fox-Hubbard",
+            "actorName": "Tameka Empson",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p02q9wmd.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 27,
+            "characterName": "Patrick Trueman",
+            "actorName": "Rudolph Walker",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p00q1dgy.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 28,
+            "characterName": "Vincent Hubbard",
+            "actorName": "Richard Blackwood",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p02qdrdh.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 29,
+            "characterName": "Carmel Kazemi",
+            "actorName": "Bonnie Langford",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p03vjfq3.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 30,
+            "characterName": "Khoroush Kazemi \n (Kush)",
+            "actorName": "Davood Ghadami",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p028p1xh.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 31,
+            "characterName": "Shakil Kazemi \n (Shaks)",
+            "actorName": "Shaheen Jafargholi",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p03tsv82.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 32,
+            "characterName": "Ben Mitchell",
+            "actorName": "Harry Reid",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p0274624.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 33,
+            "characterName": "Billy Mitchell",
+            "actorName": "Perry Fenwick",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p040hhqf.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 34,
+            "characterName": "Dennis Rickman Jnr",
+            "actorName": "Play by Bleu Landau",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p034jj9p.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 35,
+            "characterName": "Glenda Mitchell",
+            "actorName": "Glynis Barber",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p00q4hrv.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 36,
+            "characterName": "Honey Mitchell",
+            "actorName": "Emma Barton",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p0386sd7.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 37,
+            "characterName": "Jay Brown",
+            "actorName": "Jamie Borthwick",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p045n28q.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 38,
+            "characterName": "Louise Mitchell",
+            "actorName": "Tilly Keeper",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p03g76vq.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 39,
+            "characterName": "Phil Mitchell",
+            "actorName": "Steve McFadden",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p03twx6g.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 40,
+            "characterName": "Sharon Mitchell",
+            "actorName": "Letitia Dean",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p02nvkw1.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 41,
+            "characterName": "Alfie Moon",
+            "actorName": "Shane Richie",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p00pd20d.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 42,
+            "characterName": "Kat Moon",
+            "actorName": "Jessie Wallace",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p00q6x07.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 43,
+            "characterName": "Mo Harris",
+            "actorName": "Laila Morse",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p00w8df9.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 44,
+            "characterName": "Jean Slater",
+            "actorName": "Gillian Wright",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p00w8dgk.jpg",
+            "bio": null,
+            "favourite": null
+        },
+        {
+            "id": 45,
+            "characterName": "Ryan Malloy",
+            "actorName": "Neil McDermott",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/256x144/p00qpnmg.jpg",
+            "bio": null,
+            "favourite": null
+        }
+    ]
+}

@@ -1,275 +1,279 @@
+#root {
+    white-space: pre-line;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: ReithSans, Helvetica, Arial, sans-serif;
-  font-feature-settings: 'ss01';
+    margin: 0;
+    padding: 0;
+    font-family: ReithSans, Helvetica, Arial, sans-serif;
+    font-feature-settings: "ss01";
 }
 
 .header {
-  background: linear-gradient(125deg, #253a81 50%, #3051c1);
-  color: #fff;
-  padding: 1rem 0;
-  margin-bottom: 1.5rem;
-  overflow: hidden;
+    background: linear-gradient(125deg, #253a81 50%, #3051c1);
+    color: #fff;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
 }
 
 .header-content {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 h1,
 h2,
 h3 {
-  margin: 0;
+    margin: 0;
 }
 
 small {
-  display: block;
-  margin-top: 1%;
+    display: block;
+    margin-top: 1%;
 }
 .App {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 1rem 4rem 1rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem 4rem 1rem;
 }
 
 .grid {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: grid;
-  justify-content: space-between;
-  grid-gap: 4em 0;
-  grid-template-columns: repeat(auto-fit, 200px);
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    justify-content: space-between;
+    grid-gap: 4em 0;
+    grid-template-columns: repeat(auto-fit, 200px);
 }
 
 img {
-  width: 100%;
+    width: 100%;
 }
 
 input {
-  width: 60%;
-  margin-left: 10px;
-  padding: 10px;
-  font-size: 1rem;
-  font-family: ReithSans, Helvetica, Arial, sans-serif;
+    width: 60%;
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: ReithSans, Helvetica, Arial, sans-serif;
 }
 
 button {
-  border: none;
-  background: none;
+    border: none;
+    background: none;
 }
 .sort-button {
-  background-color: #253a81;
-  color: #fff;
-  display: inline-block;
-  font-weight: 700;
-  padding: 12px;
-  margin: 4px;
-  text-align: center;
-  text-decoration: none;
-  box-shadow: none;
-  border: none;
+    background-color: #253a81;
+    color: #fff;
+    display: inline-block;
+    font-weight: 700;
+    padding: 12px;
+    margin: 4px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: none;
+    border: none;
 }
 
 .sort-button:hover,
 .sort-button:focus {
-  background-color: #3051c1;
+    background-color: #3051c1;
 }
 
 .bio {
-  float: right;
+    float: right;
 }
 .spacer {
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 .favourite-button {
-  float: right;
-  color: #253a81;
-  padding-top: 3%;
-  padding-right: 0%;
-  border: none;
-  background: none;
-  outline: none;
+    float: right;
+    color: #253a81;
+    padding-top: 3%;
+    padding-right: 0%;
+    border: none;
+    background: none;
+    outline: none;
 }
 
 .favourite-button:hover,
 .favourite-button:focus {
-  color: #3051c1;
+    color: #3051c1;
 }
 
 .favourite-button.active i {
-  font-weight: bold;
+    font-weight: bold;
 }
 /* These two classes make the favourite button float
 over the Character name */
 .positioned-button {
-  position: absolute;
-  top: 0px;
-  right: 0px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
 
 .details {
-  position: relative;
-  margin-top: 10px;
+    position: relative;
+    margin-top: 10px;
 }
 
 .character {
-  display: inline-block;
+    display: inline-block;
 }
 
 .fa-heart:hover {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 /* animation of images */
 .fade-in {
-  animation: fadeIn ease 2.5s;
-  -webkit-animation: fadeIn ease 2.5s;
-  -moz-animation: fadeIn ease 2.5s;
-  -o-animation: fadeIn ease 2.5s;
-  -ms-animation: fadeIn ease 2.5s;
+    animation: fadeIn ease 2.5s;
+    -webkit-animation: fadeIn ease 2.5s;
+    -moz-animation: fadeIn ease 2.5s;
+    -o-animation: fadeIn ease 2.5s;
+    -ms-animation: fadeIn ease 2.5s;
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-ms-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* overlay for favourite button */
 .container {
-  position: relative;
-  width: 100%;
-  height: 112.5px;
-  max-width: 400px;
+    position: relative;
+    width: 100%;
+    height: 112.5px;
+    max-width: 400px;
 }
 .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.3s ease;
-  background-color: #3051c1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.3s ease;
+    background-color: #3051c1;
 }
 
 .container:hover .overlay {
-  opacity: 0.6;
+    opacity: 0.6;
 }
 
 /* heart icon for overlay button */
 .icon {
-  color: white;
-  font-size: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .icon:hover {
-  color: white;
+    color: white;
 }
 
 .icon:focus,
 .icon:active {
-  outline: none;
+    outline: none;
 }
 
 /* Modal classes */
 .biography {
-  margin: 1%;
+    margin: 1%;
 }
 .drop-down {
-  font-family: ReithSans, Helvetica, Arial, sans-serif;
-  margin-top: 1%;
-  margin-right: 1%;
+    font-family: ReithSans, Helvetica, Arial, sans-serif;
+    margin-top: 1%;
+    margin-right: 1%;
 }
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
 .modal-main {
-  position: fixed;
-  background: white;
-  padding: 3%;
-  width: 60%;
-  /* height: auto; */
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: fixed;
+    background: white;
+    padding: 3%;
+    width: 60%;
+    /* height: auto; */
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .text-area {
-  font-family: ReithSans, Helvetica, Arial, sans-serif;
-  width: 95%;
-  height: 120px;
-  border: 2px solid #cccccc;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  padding: 1%;
+    font-family: ReithSans, Helvetica, Arial, sans-serif;
+    width: 95%;
+    height: 120px;
+    border: 2px solid #cccccc;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 1%;
 }
 
 .display-block {
-  display: block;
+    display: block;
 }
 
 .display-none {
-  display: none;
+    display: none;
 }
